@@ -1,0 +1,127 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-heading: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+}
+
+/* Light theme — warm paper */
+:root {
+  color-scheme: light;
+  --background: #f2f0e9;
+  --foreground: #1a1814;
+  --card: #ebe8df;
+  --card-foreground: #1a1814;
+  --popover: #f2f0e9;
+  --popover-foreground: #1a1814;
+  --primary: #1a1814;
+  --primary-foreground: #f2f0e9;
+  --secondary: #e4e0d5;
+  --secondary-foreground: #1a1814;
+  --muted: #e4e0d5;
+  --muted-foreground: #6b665c;
+  --accent: #ff9f1c;
+  --accent-foreground: #1a1814;
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: #d8d3c6;
+  --input: #d8d3c6;
+  --ring: #ff9f1c;
+  --radius: 0.25rem;
+  --grain-opacity: 0.04;
+}
+
+/* Dark theme — near black */
+.dark {
+  color-scheme: dark;
+  --background: #0a0a0a;
+  --foreground: #f2f0e9;
+  --card: #141414;
+  --card-foreground: #f2f0e9;
+  --popover: #111111;
+  --popover-foreground: #f2f0e9;
+  --primary: #f2f0e9;
+  --primary-foreground: #0a0a0a;
+  --secondary: #1a1a1a;
+  --secondary-foreground: #f2f0e9;
+  --muted: #1a1a1a;
+  --muted-foreground: #8a857a;
+  --accent: #ff9f1c;
+  --accent-foreground: #0a0a0a;
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: rgba(242, 240, 233, 0.1);
+  --input: rgba(242, 240, 233, 0.14);
+  --ring: #ff9f1c;
+  --grain-opacity: 0.05;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+}
+
+@layer utilities {
+  /* Grain / noise overlay */
+  .grain-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+    pointer-events: none;
+    opacity: var(--grain-opacity);
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    mix-blend-mode: overlay;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .hide-cursor,
+  .hide-cursor * {
+    cursor: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
