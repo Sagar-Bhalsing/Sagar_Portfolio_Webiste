@@ -20,43 +20,43 @@ export type Project = {
 export const PROJECTS: Project[] = [
   {
     index: '01',
-    title: 'Halcyon',
+    title: '101+',
     description:
-      'A real-time collaborative editor with conflict-free sync, presence cursors, and offline support. Built for teams that move fast and never lose a keystroke.',
-    tags: ['Next.js', 'TypeScript', 'WebSockets', 'CRDT'],
+      'A longevity & health optimization app live on the US Play Store. Built biomarker visualizations in Jetpack Compose with real-time metric tracking, GraphQL APIs, and Shen AI SDK face-scan analysis for personalized health insights.',
+    tags: ['Kotlin', 'Jetpack Compose', 'GraphQL', 'Shen AI SDK'],
     year: '2025',
-    github: 'https://github.com',
-    demo: 'https://example.com',
+    github: 'https://github.com/Sagar-Bhalsing',
+    demo: 'https://play.google.com',
   },
   {
     index: '02',
-    title: 'Northwind',
+    title: 'UEFA More or Less',
     description:
-      'An analytics platform that turns raw event streams into readable narratives. Ingests millions of events daily with sub-second query latency.',
-    tags: ['Node.js', 'PostgreSQL', 'Redis', 'React'],
+      'A real-time interactive sports game supporting 200K+ quarterly active users. Improved retention by 25% through personalized push notifications and analytics-driven feature enhancements.',
+    tags: ['Kotlin', 'Jetpack Compose', 'Firebase', 'Analytics'],
     year: '2024',
-    github: 'https://github.com',
-    demo: 'https://example.com',
+    github: 'https://github.com/Sagar-Bhalsing',
+    demo: 'https://play.google.com',
   },
   {
     index: '03',
-    title: 'Pocketsmith',
+    title: 'UEFA Trivia Quiz',
     description:
-      'A native Android budgeting app with delightful motion design and a privacy-first local engine. Featured on Google Play.',
-    tags: ['Kotlin', 'Jetpack Compose', 'Room', 'Coroutines'],
+      'An image-based trivia experience driving 30% higher engagement through optimized UI and smooth state handling. Reduced load times by 35% using DataStore caching and optimized network interactions.',
+    tags: ['Kotlin', 'Jetpack Compose', 'DataStore', 'REST'],
     year: '2024',
-    github: 'https://github.com',
-    demo: 'https://example.com',
+    github: 'https://github.com/Sagar-Bhalsing',
+    demo: 'https://play.google.com',
   },
   {
     index: '04',
-    title: 'Lumen UI',
+    title: 'F1 Predictor Game',
     description:
-      'An open-source component library focused on accessibility and motion. 4k+ stars and used in production by dozens of teams.',
-    tags: ['React', 'TypeScript', 'Framer Motion', 'a11y'],
+      'An Android prediction game built on modern MVI architecture with predictable unidirectional data flow. Architected an extensible codebase supporting rapid feature expansion with minimal refactoring.',
+    tags: ['Kotlin', 'MVI', 'Clean Architecture', 'Coroutines'],
     year: '2023',
-    github: 'https://github.com',
-    demo: 'https://example.com',
+    github: 'https://github.com/Sagar-Bhalsing',
+    demo: 'https://play.google.com',
   },
 ]
 
@@ -69,32 +69,25 @@ export type Experience = {
 
 export const EXPERIENCE: Experience[] = [
   {
-    company: 'Vercel',
-    role: 'Senior Full-stack Engineer',
-    year: '2023 — Present',
+    company: 'Bond.AI',
+    role: 'Android Developer',
+    year: 'Dec 2025 — Present',
     description:
-      'Lead engineer on developer tooling. Shipped features used by millions of developers and mentored a team of five.',
+      'Building 101+, a longevity-focused app live on the US Play Store. Develop scalable Jetpack Compose features with MVVM and GraphQL integration, integrated the Shen AI SDK for face-scan biomarker analysis, and maintain 90%+ unit test coverage across weekly production releases.',
   },
   {
-    company: 'Linear',
-    role: 'Product Engineer',
-    year: '2021 — 2023',
+    company: 'Sportz Interactive',
+    role: 'Associate — Android',
+    year: 'Aug 2024 — Dec 2025',
     description:
-      'Built core issue-tracking workflows and the real-time sync engine. Obsessed over performance and interaction polish.',
+      'Delivered 5+ production features increasing user engagement by 20% within three months across high-traffic sports apps. Collaborated with 10+ cross-functional teammates in Agile sprints, cutting delivery timelines by 15% and enhancing Firebase analytics instrumentation.',
   },
   {
-    company: 'Stripe',
-    role: 'Software Engineer',
-    year: '2019 — 2021',
+    company: 'Sportz Interactive',
+    role: 'Jr. Associate — Android',
+    year: 'Jul 2023 — Aug 2024',
     description:
-      'Worked on the payments dashboard and internal design systems. Improved render performance across key flows.',
-  },
-  {
-    company: 'Freelance',
-    role: 'Full-stack Developer',
-    year: '2017 — 2019',
-    description:
-      'Partnered with startups to design and ship web and mobile products from zero to launch.',
+      'Built core Android modules achieving 99.9% crash-free sessions and 15% faster startup performance. Contributed to sprint planning, code reviews, and QA processes ensuring production stability.',
   },
 ]
 
@@ -105,41 +98,59 @@ export type SkillGroup = {
 
 export const SKILL_GROUPS: SkillGroup[] = [
   {
-    category: 'Frontend',
-    skills: ['React', 'Next.js', 'TypeScript', 'Tailwind', 'Framer Motion'],
+    category: 'Languages',
+    skills: ['Kotlin', 'Java', 'SQL'],
   },
   {
-    category: 'Backend',
-    skills: ['Node.js', 'PostgreSQL', 'Redis', 'GraphQL', 'tRPC'],
+    category: 'Architecture',
+    skills: ['MVVM', 'MVI', 'Clean Architecture', 'Coroutines', 'Modularization'],
   },
   {
-    category: 'Mobile',
-    skills: ['Kotlin', 'Android', 'Jetpack Compose', 'Swift'],
+    category: 'Networking & Data',
+    skills: ['Retrofit', 'REST APIs', 'GraphQL', 'Room', 'DataStore', 'OkHttp'],
   },
   {
-    category: 'Tools',
-    skills: ['Git', 'Docker', 'Figma', 'Vercel', 'Linear'],
+    category: 'Quality & Tools',
+    skills: ['Unit Testing', 'SonarQube', 'Git', 'Bitbucket', 'Jira', 'Crashlytics'],
   },
 ]
 
 export const MARQUEE_SKILLS = [
-  'React',
-  'Next.js',
-  'TypeScript',
-  'Node.js',
   'Kotlin',
-  'Android',
+  'Java',
   'Jetpack Compose',
-  'PostgreSQL',
+  'MVVM',
+  'MVI',
+  'Clean Architecture',
+  'Coroutines',
+  'Retrofit',
   'GraphQL',
-  'Tailwind',
-  'Framer Motion',
-  'Docker',
+  'Room',
+  'DataStore',
+  'Firebase',
+  'Crashlytics',
+  'SonarQube',
 ]
 
 export const SOCIALS = [
-  { label: 'Email', value: 'hello@kaimercer.dev', href: 'mailto:hello@kaimercer.dev' },
-  { label: 'GitHub', value: 'github.com/kaimercer', href: 'https://github.com' },
-  { label: 'LinkedIn', value: 'linkedin.com/in/kaimercer', href: 'https://linkedin.com' },
-  { label: 'X / Twitter', value: '@kaimercer', href: 'https://x.com' },
+  {
+    label: 'Email',
+    value: 'sbhalshing2265@gmail.com',
+    href: 'mailto:sbhalshing2265@gmail.com',
+  },
+  {
+    label: 'GitHub',
+    value: 'github.com/Sagar-Bhalsing',
+    href: 'https://github.com/Sagar-Bhalsing',
+  },
+  {
+    label: 'LinkedIn',
+    value: 'linkedin.com/in/sagar-bhalsing',
+    href: 'https://linkedin.com/in/sagar-bhalsing',
+  },
+  {
+    label: 'LeetCode',
+    value: 'leetcode.com/u/CypherBot-XT',
+    href: 'https://leetcode.com/u/CypherBot-XT',
+  },
 ]

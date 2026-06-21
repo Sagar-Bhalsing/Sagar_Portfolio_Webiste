@@ -33,17 +33,17 @@ export function Hero() {
             </span>
             Available for work
           </span>
-          <span>Lisbon, Portugal · GMT</span>
-          <span className="hidden md:inline">Full-stack · Mobile</span>
+          <span>Mumbai, India · IST</span>
+          <span className="hidden md:inline">Android · Mobile</span>
         </motion.div>
 
         {/* Name */}
         <h1 className="font-heading text-[clamp(2.75rem,12vw,11rem)] font-bold leading-[0.92] tracking-tight">
           <span className="block overflow-hidden">
-            <ScrambleText text="KAI" startDelay={250} duration={900} />
+            <ScrambleText text="SAGAR" startDelay={250} duration={900} />
           </span>
           <span className="block overflow-hidden text-accent">
-            <ScrambleText text="MERCER" startDelay={450} duration={1100} />
+            <ScrambleText text="BHALSING" startDelay={450} duration={1100} />
           </span>
         </h1>
 
@@ -55,9 +55,10 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.9 }}
             className="max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground md:text-2xl"
           >
-            Full-stack developer building things that work —{' '}
+            Android developer building things that work —{' '}
             <span className="text-foreground">
-              from resilient backends to interfaces that feel alive.
+              high-performance mobile apps in Kotlin &amp; Jetpack Compose for
+              10M+ users.
             </span>
           </motion.p>
 
