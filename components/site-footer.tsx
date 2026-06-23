@@ -12,7 +12,7 @@ export function SiteFooter() {
         new Intl.DateTimeFormat('en-GB', {
           hour: '2-digit',
           minute: '2-digit',
-          timeZone: 'Europe/Lisbon',
+          timeZone: 'Asia/Kolkata',
         }).format(new Date()),
       )
     }
@@ -25,9 +25,9 @@ export function SiteFooter() {
     <footer className="border-t border-border px-6 py-10 md:px-12">
       <div className="mx-auto flex w-full max-w-[1400px] flex-col gap-6 md:flex-row md:items-center md:justify-between">
         <div className="flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-xs uppercase tracking-widest text-muted-foreground">
-          <span>© {new Date().getFullYear()} Kai Mercer</span>
+          <span>© {new Date().getFullYear()} Sagar Bhalshing</span>
           <span className="hidden md:inline">·</span>
-          <span>Lisbon {time}</span>
+          <span> Mumbai {time}</span>
           <span className="hidden md:inline">·</span>
           <span>Built with care</span>
         </div>

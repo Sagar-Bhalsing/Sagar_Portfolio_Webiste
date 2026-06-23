@@ -27,7 +27,7 @@ export function SiteNav() {
           onClick={() => go('home')}
           className="font-mono text-sm font-medium tracking-tight text-foreground"
         >
-          KM<span className="text-accent">.</span>
+          SB<span className="text-accent">.</span>
         </button>
 
         {/* Desktop nav */}

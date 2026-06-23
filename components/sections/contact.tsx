@@ -32,11 +32,11 @@ export function Contact() {
             >
               <Magnetic strength={0.4}>
                 <a
-                  href="mailto:hello@kaimercer.dev"
+                  href="mailto:sbhalshing2265@gmail.com"
                   data-cursor="Say hi"
                   className="group inline-flex items-center gap-3 rounded-full bg-accent px-7 py-4 font-mono text-sm font-medium uppercase tracking-wider text-accent-foreground"
                 >
-                  hello@kaimercer.dev
+                  sbhalshing2265@gmail.com
                   <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </a>
               </Magnetic>
