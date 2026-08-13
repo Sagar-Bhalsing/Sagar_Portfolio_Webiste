@@ -16,11 +16,11 @@ const CHIPS = [
 
 export function About() {
   return (
-    <section id="about" className="px-6 py-28 md:px-12 md:py-40">
+    <section id="about" className="px-6 py-20 md:px-12 md:py-28">
       <div className="mx-auto w-full max-w-[1400px]">
         <SectionHeading index="01" label="About" />
 
-        <div className="mt-16 grid gap-12 md:grid-cols-12 md:gap-8">
+        <div className="mt-12 grid gap-10 md:grid-cols-12 md:gap-8">
           <div className="md:col-span-7 md:col-start-1">
             <h2 className="font-heading text-3xl font-bold leading-tight tracking-tight text-balance md:text-5xl">
               <RevealText text="I build software that respects both the people who use it and the people who maintain it." />
@@ -46,7 +46,7 @@ export function About() {
         </div>
 
         {/* Skill chips */}
-        <div className="mt-16 flex flex-wrap gap-3">
+        <div className="mt-12 flex flex-wrap gap-3">
           {CHIPS.map((chip, i) => (
             <motion.span
               key={chip}

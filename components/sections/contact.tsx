@@ -9,11 +9,11 @@ import { SOCIALS } from '@/lib/site-data'
 
 export function Contact() {
   return (
-    <section id="contact" className="px-6 py-28 md:px-12 md:py-40">
+    <section id="contact" className="px-6 py-20 md:px-12 md:py-28">
       <div className="mx-auto w-full max-w-[1400px]">
         <SectionHeading index="05" label="Contact" />
 
-        <div className="mt-16 grid gap-16 md:grid-cols-12">
+        <div className="mt-12 grid gap-12 md:grid-cols-12">
           <div className="md:col-span-7">
             <h2 className="font-heading text-[clamp(2.5rem,7vw,6rem)] font-bold leading-[0.95] tracking-tight">
               <RevealText text="Let's build" />

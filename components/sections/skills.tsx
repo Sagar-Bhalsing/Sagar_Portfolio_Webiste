@@ -26,16 +26,16 @@ function DraggableChip({ label }: { label: string }) {
 
 export function Skills() {
   return (
-    <section id="skills" className="overflow-hidden py-28 md:py-40">
+    <section id="skills" className="overflow-hidden py-20 md:py-28">
       <div className="mx-auto w-full max-w-[1400px] px-6 md:px-12">
         <SectionHeading index="04" label="Skills & Tools" />
 
-        <h2 className="mt-12 max-w-2xl font-heading text-4xl font-bold leading-tight tracking-tight text-balance md:text-6xl">
+        <h2 className="mt-10 max-w-2xl font-heading text-4xl font-bold leading-tight tracking-tight text-balance md:text-6xl">
           The stack I reach for.
         </h2>
 
         {/* Grouped grid */}
-        <div className="mt-20 grid gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid gap-x-8 gap-y-12 md:grid-cols-2 lg:grid-cols-4">
           {SKILL_GROUPS.map((group, gi) => (
             <motion.div
               key={group.category}
@@ -56,13 +56,13 @@ export function Skills() {
           ))}
         </div>
 
-        <p className="mt-12 font-mono text-xs uppercase tracking-widest text-muted-foreground">
+        <p className="mt-10 font-mono text-xs uppercase tracking-widest text-muted-foreground">
           Tip — try dragging the chips around.
         </p>
       </div>
 
       {/* Infinite marquee */}
-      <div className="mt-24 border-y border-border py-6">
+      <div className="mt-16 border-y border-border py-6">
         <Marquee items={MARQUEE_SKILLS} duration={32} />
       </div>
       <div className="border-b border-border py-6">

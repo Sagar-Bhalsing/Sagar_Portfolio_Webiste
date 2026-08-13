@@ -51,15 +51,15 @@ export function Experience() {
   const scaleY = useTransform(scrollYProgress, [0, 1], [0, 1])
 
   return (
-    <section id="experience" className="px-6 py-28 md:px-12 md:py-40">
+    <section id="experience" className="px-6 py-20 md:px-12 md:py-28">
       <div className="mx-auto w-full max-w-[1400px]">
         <SectionHeading index="03" label="Experience" />
 
-        <h2 className="mt-12 max-w-2xl font-heading text-4xl font-bold leading-tight tracking-tight text-balance md:text-6xl">
+        <h2 className="mt-10 max-w-2xl font-heading text-4xl font-bold leading-tight tracking-tight text-balance md:text-6xl">
           Where I&apos;ve made things.
         </h2>
 
-        <div ref={ref} className="relative mt-20">
+        <div ref={ref} className="relative mt-14">
           {/* base line */}
           <div className="absolute bottom-0 left-[11px] top-0 w-px bg-border md:left-[19px]" />
           {/* animated fill */}

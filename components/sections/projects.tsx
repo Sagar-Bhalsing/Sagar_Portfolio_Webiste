@@ -31,19 +31,19 @@ function ParallaxCard({
 
 export function Projects() {
   return (
-    <section id="work" className="px-6 py-28 md:px-12 md:py-40">
+    <section id="work" className="px-6 py-20 md:px-12 md:py-28">
       <div className="mx-auto w-full max-w-[1400px]">
         <SectionHeading index="02" label="Selected Work" />
 
-        <h2 className="mt-12 max-w-2xl font-heading text-4xl font-bold leading-tight tracking-tight text-balance md:text-6xl">
+        <h2 className="mt-10 max-w-2xl font-heading text-4xl font-bold leading-tight tracking-tight text-balance md:text-6xl">
           A few things I&apos;ve built recently.
         </h2>
 
-        <div className="mt-20 grid gap-6 md:grid-cols-2 md:gap-8">
+        <div className="mt-14 grid gap-6 md:grid-cols-2 md:gap-8">
           {PROJECTS.map((project, i) => (
             <div
               key={project.title}
-              className={i % 2 === 1 ? 'md:mt-20' : undefined}
+              className={i % 2 === 1 ? 'md:mt-12' : undefined}
             >
               <ParallaxCard index={i}>
                 <ProjectCard project={project} />
