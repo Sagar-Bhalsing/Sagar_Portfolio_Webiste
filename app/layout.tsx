@@ -17,9 +17,9 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Kai Mercer — Full-stack Developer',
+  title: 'Sagar Bhalshing — App Developer',
   description:
-    'Full-stack developer building things that work. Portfolio of selected work, experience, and ways to get in touch.',
+    'App developer building things that work. Portfolio of selected work, experience, and ways to get in touch.',
   generator: 'v0.app',
 }
 

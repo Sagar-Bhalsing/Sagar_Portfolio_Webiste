@@ -51,7 +51,6 @@ export function ProjectCard({ project }: { project: Project }) {
       style={{ rotateX, rotateY, transformPerspective: 1000 }}
       className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-border bg-card p-7 transition-colors duration-500 hover:border-accent/60 md:p-9"
     >
-      {/* glow */}
       <div
         aria-hidden
         className="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-accent/10 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100"
@@ -71,7 +70,31 @@ export function ProjectCard({ project }: { project: Project }) {
           {project.title}
         </h3>
 
-        {/* Expanding details */}
+        <motion.div
+          initial={false}
+          animate={{
+            height: hovered && project.video ? 'auto' : 0,
+            opacity: hovered && project.video ? 1 : 0,
+          }}
+          transition={{ duration: 0.45, ease: [0.21, 0.47, 0.32, 0.98] }}
+          className="overflow-hidden"
+        >
+          <div className="mt-5 flex justify-center">
+            <div className="w-full max-w-[240px] overflow-hidden rounded-[1.5rem] border border-border bg-black">
+              <div className="aspect-[9/16]">
+                <video
+                  src={project.video}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
         <motion.div
           initial={false}
           animate={{
@@ -88,7 +111,6 @@ export function ProjectCard({ project }: { project: Project }) {
       </div>
 
       <div className="relative mt-8">
-        {/* Tech tags */}
         <div className="flex flex-wrap gap-2">
           <AnimatePresence>
             {project.tags.map((tag, i) => (
@@ -113,10 +135,9 @@ export function ProjectCard({ project }: { project: Project }) {
           </AnimatePresence>
         </div>
 
-        {/* Links */}
         <div className="mt-7 flex items-center gap-5 border-t border-border pt-6">
           <a
-            href={project.github}
+            href={project.playStore ?? project.github}
             target="_blank"
             rel="noopener noreferrer"
             data-cursor=""
@@ -127,7 +148,7 @@ export function ProjectCard({ project }: { project: Project }) {
             Source
           </a>
           <a
-            href={project.demo}
+            href={project.video ?? project.demo}
             target="_blank"
             rel="noopener noreferrer"
             data-cursor=""

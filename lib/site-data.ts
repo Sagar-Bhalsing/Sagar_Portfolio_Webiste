@@ -15,6 +15,8 @@ export type Project = {
   year: string
   github: string
   demo: string
+  playStore?: string
+  video?: string
 }
 
 export const PROJECTS: Project[] = [
@@ -25,8 +27,10 @@ export const PROJECTS: Project[] = [
       'A longevity & health optimization app live on the US Play Store. Built biomarker visualizations in Jetpack Compose with real-time metric tracking, GraphQL APIs, and Shen AI SDK face-scan analysis for personalized health insights.',
     tags: ['Kotlin', 'Jetpack Compose', 'GraphQL', 'Shen AI SDK'],
     year: '2025',
-    github: 'https://github.com/Sagar-Bhalsing',
-    demo: 'https://play.google.com',
+    github: 'https://play.google.com/store/apps/details?id=com.bond.fireapp&pcampaignid=web_share',
+    demo: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+    playStore: 'https://play.google.com/store/apps/details?id=com.bond.fireapp&pcampaignid=web_share',
+    video: '/videos/5217386-hd_1080_1920_30fps.mp4'
   },
   {
     index: '02',
@@ -35,8 +39,9 @@ export const PROJECTS: Project[] = [
       'A real-time interactive sports game supporting 200K+ quarterly active users. Improved retention by 25% through personalized push notifications and analytics-driven feature enhancements.',
     tags: ['Kotlin', 'Jetpack Compose', 'Firebase', 'Analytics'],
     year: '2024',
-    github: 'https://github.com/Sagar-Bhalsing',
+    github: 'https://play.google.com/store/apps/details?id=com.uefa.eurofantasy&pcampaignid=web_share',
     demo: 'https://play.google.com',
+    video: '/videos/5217386-hd_1080_1920_30fps.mp4'
   },
   {
     index: '03',
@@ -45,8 +50,9 @@ export const PROJECTS: Project[] = [
       'An image-based trivia experience driving 30% higher engagement through optimized UI and smooth state handling. Reduced load times by 35% using DataStore caching and optimized network interactions.',
     tags: ['Kotlin', 'Jetpack Compose', 'DataStore', 'REST'],
     year: '2024',
-    github: 'https://github.com/Sagar-Bhalsing',
+    github: 'https://play.google.com/store/apps/details?id=com.uefa.eurofantasy&pcampaignid=web_share',
     demo: 'https://play.google.com',
+    video: '/videos/5217386-hd_1080_1920_30fps.mp4'
   },
   {
     index: '04',
@@ -55,8 +61,9 @@ export const PROJECTS: Project[] = [
       'An Android prediction game built on modern MVI architecture with predictable unidirectional data flow. Architected an extensible codebase supporting rapid feature expansion with minimal refactoring.',
     tags: ['Kotlin', 'MVI', 'Clean Architecture', 'Coroutines'],
     year: '2023',
-    github: 'https://github.com/Sagar-Bhalsing',
+    github: 'https://play.google.com/store/apps/details?id=com.softpauer.f1timingapp2014.basic&pcampaignid=web_share',
     demo: 'https://play.google.com',
+    video: '/videos/5217386-hd_1080_1920_30fps.mp4'
   },
 ]
 
