@@ -82,7 +82,7 @@ export function Contact() {
                     target={social.href.startsWith('http') ? '_blank' : undefined}
                     rel="noopener noreferrer"
                     data-cursor=""
-                    className="group flex items-center justify-between py-5"
+                    className="group flex items-center justify-start gap-4 py-5"
                     aria-label={social.label}
                   >
                     <span className="relative flex size-11 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors group-hover:border-accent group-hover:text-accent">
