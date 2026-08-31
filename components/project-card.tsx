@@ -18,6 +18,12 @@ export function ProjectCard({ project }: { project: Project }) {
   const [hovered, setHovered] = useState(false)
   const [activeImage, setActiveImage] = useState(0)
   const images = project.images ?? []
+  const previousImage = images.length
+    ? images[(activeImage - 1 + images.length) % images.length]
+    : undefined
+  const nextImage = images.length
+    ? images[(activeImage + 1) % images.length]
+    : undefined
 
   const mx = useMotionValue(0)
   const my = useMotionValue(0)
@@ -84,21 +90,40 @@ export function ProjectCard({ project }: { project: Project }) {
 
         {images.length > 0 ? (
           <div className="mt-6">
-            <div className="relative overflow-hidden rounded-xl border border-border bg-background">
-              <div className="aspect-[16/10]">
-                <AnimatePresence mode="wait">
-                  <motion.img
-                    key={images[activeImage]}
-                    src={images[activeImage]}
-                    alt={`${project.title} preview ${activeImage + 1}`}
-                    initial={{ opacity: 0, scale: reduceMotion ? 1 : 1.03 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: reduceMotion ? 1 : 0.98 }}
-                    transition={{ duration: 0.35 }}
-                    className="h-full w-full object-cover"
+            <div className="relative overflow-hidden rounded-xl border border-border bg-background px-7 py-5">
+              <div className="relative mx-auto h-[360px] max-w-[300px] sm:h-[400px]">
+                {images.length > 1 && previousImage ? (
+                  <img
+                    src={previousImage}
+                    alt=""
+                    aria-hidden
+                    className="absolute left-0 top-1/2 h-[82%] w-[58%] -translate-x-[34%] -translate-y-1/2 rounded-[1.35rem] border border-border object-cover opacity-45 shadow-sm blur-[0.2px]"
                   />
-                </AnimatePresence>
-              </div>
+                ) : null}
+
+                {images.length > 1 && nextImage ? (
+                  <img
+                    src={nextImage}
+                    alt=""
+                    aria-hidden
+                    className="absolute right-0 top-1/2 h-[82%] w-[58%] -translate-y-1/2 translate-x-[34%] rounded-[1.35rem] border border-border object-cover opacity-45 shadow-sm blur-[0.2px]"
+                  />
+                ) : null}
+
+                <div className="absolute inset-x-1/2 top-0 h-full w-[68%] -translate-x-1/2 overflow-hidden rounded-[1.75rem] border border-border bg-black shadow-xl">
+                  <AnimatePresence mode="wait">
+                    <motion.img
+                      key={images[activeImage]}
+                      src={images[activeImage]}
+                      alt={`${project.title} preview ${activeImage + 1}`}
+                      initial={{ opacity: 0, x: reduceMotion ? 0 : 24, scale: reduceMotion ? 1 : 1.03 }}
+                      animate={{ opacity: 1, x: 0, scale: 1 }}
+                      exit={{ opacity: 0, x: reduceMotion ? 0 : -24, scale: reduceMotion ? 1 : 0.98 }}
+                      transition={{ duration: 0.35 }}
+                      className="h-full w-full object-cover"
+                    />
+                  </AnimatePresence>
+                </div>
 
               {images.length > 1 ? (
                 <>
@@ -107,7 +132,7 @@ export function ProjectCard({ project }: { project: Project }) {
                     aria-label="Previous project image"
                     data-cursor=""
                     onClick={showPreviousImage}
-                    className="absolute left-3 top-1/2 flex size-9 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-background/80 text-foreground opacity-0 backdrop-blur transition-opacity hover:border-accent hover:text-accent group-hover:opacity-100"
+                    className="absolute left-0 top-1/2 z-10 flex size-9 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-background/85 text-foreground opacity-0 backdrop-blur transition-opacity hover:border-accent hover:text-accent group-hover:opacity-100"
                   >
                     <ChevronLeft className="h-4 w-4" />
                   </button>
@@ -116,12 +141,12 @@ export function ProjectCard({ project }: { project: Project }) {
                     aria-label="Next project image"
                     data-cursor=""
                     onClick={showNextImage}
-                    className="absolute right-3 top-1/2 flex size-9 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-background/80 text-foreground opacity-0 backdrop-blur transition-opacity hover:border-accent hover:text-accent group-hover:opacity-100"
+                    className="absolute right-0 top-1/2 z-10 flex size-9 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-background/85 text-foreground opacity-0 backdrop-blur transition-opacity hover:border-accent hover:text-accent group-hover:opacity-100"
                   >
                     <ChevronRight className="h-4 w-4" />
                   </button>
 
-                  <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 gap-2">
+                  <div className="absolute bottom-3 left-1/2 z-10 flex -translate-x-1/2 gap-2">
                     {images.map((image, i) => (
                       <button
                         key={image}
@@ -142,6 +167,7 @@ export function ProjectCard({ project }: { project: Project }) {
                   </div>
                 </>
               ) : null}
+              </div>
             </div>
           </div>
         ) : null}
