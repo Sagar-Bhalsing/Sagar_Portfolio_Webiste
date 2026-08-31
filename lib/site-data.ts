@@ -16,7 +16,7 @@ export type Project = {
   github: string
   demo: string
   playStore?: string
-  video?: string
+  images?: string[]
 }
 
 export const PROJECTS: Project[] = [
@@ -30,7 +30,11 @@ export const PROJECTS: Project[] = [
     github: 'https://play.google.com/store/apps/details?id=com.bond.fireapp&pcampaignid=web_share',
     demo: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
     playStore: 'https://play.google.com/store/apps/details?id=com.bond.fireapp&pcampaignid=web_share',
-    video: '/videos/5217386-hd_1080_1920_30fps.mp4'
+    images: [
+      'project-images/hero.png',
+      'project-images/about.png',
+      'project-images/about2.png',
+    ],
   },
   {
     index: '02',
@@ -41,7 +45,11 @@ export const PROJECTS: Project[] = [
     year: '2024',
     github: 'https://play.google.com/store/apps/details?id=com.uefa.eurofantasy&pcampaignid=web_share',
     demo: 'https://play.google.com',
-    video: '/videos/5217386-hd_1080_1920_30fps.mp4'
+    images: [
+      'project-images/projects.png',
+      'project-images/hero.png',
+      'project-images/about.png',
+    ],
   },
   {
     index: '03',
@@ -52,7 +60,11 @@ export const PROJECTS: Project[] = [
     year: '2024',
     github: 'https://play.google.com/store/apps/details?id=com.uefa.eurofantasy&pcampaignid=web_share',
     demo: 'https://play.google.com',
-    video: '/videos/5217386-hd_1080_1920_30fps.mp4'
+    images: [
+      'project-images/about.png',
+      'project-images/projects.png',
+      'project-images/about2.png',
+    ],
   },
   {
     index: '04',
@@ -63,7 +75,11 @@ export const PROJECTS: Project[] = [
     year: '2023',
     github: 'https://play.google.com/store/apps/details?id=com.softpauer.f1timingapp2014.basic&pcampaignid=web_share',
     demo: 'https://play.google.com',
-    video: '/videos/5217386-hd_1080_1920_30fps.mp4'
+    images: [
+      'project-images/about2.png',
+      'project-images/hero.png',
+      'project-images/projects.png',
+    ],
   },
 ]
 
