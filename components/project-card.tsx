@@ -90,14 +90,13 @@ export function ProjectCard({ project }: { project: Project }) {
 
         {images.length > 0 ? (
           <div className="mt-6">
-            <div className="relative overflow-hidden rounded-xl border border-border bg-background px-7 py-5">
-              <div className="relative mx-auto h-[360px] max-w-[300px] sm:h-[400px]">
+            <div className="relative mx-auto h-[360px] max-w-[340px] overflow-hidden sm:h-[400px]">
                 {images.length > 1 && previousImage ? (
                   <img
                     src={previousImage}
                     alt=""
                     aria-hidden
-                    className="absolute left-0 top-1/2 h-[82%] w-[58%] -translate-x-[34%] -translate-y-1/2 rounded-[1.35rem] border border-border object-cover opacity-45 shadow-sm blur-[0.2px]"
+                    className="absolute left-0 top-1/2 h-[82%] w-[58%] -translate-x-[34%] -translate-y-1/2 rounded-[1.35rem] object-cover opacity-45 shadow-sm blur-[0.2px]"
                   />
                 ) : null}
 
@@ -106,11 +105,11 @@ export function ProjectCard({ project }: { project: Project }) {
                     src={nextImage}
                     alt=""
                     aria-hidden
-                    className="absolute right-0 top-1/2 h-[82%] w-[58%] -translate-y-1/2 translate-x-[34%] rounded-[1.35rem] border border-border object-cover opacity-45 shadow-sm blur-[0.2px]"
+                    className="absolute right-0 top-1/2 h-[82%] w-[58%] -translate-y-1/2 translate-x-[34%] rounded-[1.35rem] object-cover opacity-45 shadow-sm blur-[0.2px]"
                   />
                 ) : null}
 
-                <div className="absolute inset-x-1/2 top-0 h-full w-[68%] -translate-x-1/2 overflow-hidden rounded-[1.75rem] border border-border bg-black shadow-xl">
+                <div className="absolute inset-x-1/2 top-0 h-full w-[68%] -translate-x-1/2 overflow-hidden rounded-[1.75rem] shadow-xl">
                   <AnimatePresence mode="wait">
                     <motion.img
                       key={images[activeImage]}
@@ -167,7 +166,6 @@ export function ProjectCard({ project }: { project: Project }) {
                   </div>
                 </>
               ) : null}
-              </div>
             </div>
           </div>
         ) : null}
