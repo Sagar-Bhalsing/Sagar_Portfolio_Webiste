@@ -5,13 +5,25 @@ import { SectionHeading } from '@/components/section-heading'
 import { FadeIn, RevealText } from '@/components/reveal'
 
 const CHIPS = [
-  'React',
-  'Next.js',
-  'TypeScript',
-  'Node.js',
   'Kotlin',
   'Android',
   'Jetpack Compose',
+  'KMP',
+  'CMP',
+  'MVVM',
+  'MVI',
+  'Clean Architecture',
+  'GraphQL',
+  'REST APIs',
+  'Coroutines',
+  'Flow',
+  'Hilt',
+  'Koin',
+  'Room',
+  'SQLDelight',
+  'Firebase',
+  'GitHub Actions',
+  'CI/CD',
 ]
 
 export function About() {
@@ -23,17 +35,19 @@ export function About() {
         <div className="mt-12 grid gap-10 md:grid-cols-12 md:gap-8">
           <div className="md:col-span-7 md:col-start-1">
             <h2 className="font-heading text-3xl font-bold leading-tight tracking-tight text-balance md:text-5xl">
-              <RevealText text="I build software that respects both the people who use it and the people who maintain it." />
+              <RevealText text="I build Android experiences that are
+fast, scalable, and thoughtfully
+engineered — from the first line of
+Kotlin to the final production release." />
             </h2>
           </div>
 
           <div className="md:col-span-4 md:col-start-9 md:pt-2">
             <FadeIn delay={0.1}>
               <p className="text-pretty leading-relaxed text-muted-foreground">
-                I&apos;m a full-stack developer with eight years of experience
-                spanning web platforms and native Android. I care about the
-                details others skip — motion, latency, accessibility, and the
-                quiet decisions that make a product feel considered.
+                I&apos;m an Android developer with 2+ years of experience building production applications across sports and health-tech. I specialize in Kotlin, Jetpack Compose, MVVM/MVI, and scalable architecture, with a focus on performance, reliability, and clean user experiences.
+
+I enjoy solving complex engineering problems — from real-time data and interactive UI to GraphQL integrations, AI-powered features, and biomarker visualizations. I care about writing maintainable code, building things that scale, and continuously improving how products feel and perform.
               </p>
             </FadeIn>
             <FadeIn delay={0.2}>
