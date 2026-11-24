@@ -1,55 +1,22 @@
-'use client'
-
-import { useRef } from 'react'
-import { motion, useScroll, useTransform } from 'framer-motion'
-import { SectionHeading } from '@/components/section-heading'
 import { ProjectCard } from '@/components/project-card'
 import { PROJECTS } from '@/lib/site-data'
 
-function ParallaxCard({
-  index,
-  children,
-}: {
-  index: number
-  children: React.ReactNode
-}) {
-  const ref = useRef<HTMLDivElement>(null)
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['start end', 'end start'],
-  })
-  // alternate offset direction for editorial rhythm
-  const dir = index % 2 === 0 ? -40 : 40
-  const y = useTransform(scrollYProgress, [0, 1], [dir, -dir])
-
-  return (
-    <motion.div ref={ref} style={{ y }}>
-      {children}
-    </motion.div>
-  )
-}
-
 export function Projects() {
+  const orderedProjects = [...PROJECTS].sort(
+    (first, second) => Number(first.index) - Number(second.index),
+  )
+
   return (
     <section id="work" className="px-6 py-20 md:px-12 md:py-28">
       <div className="mx-auto w-full max-w-[1400px]">
-        <SectionHeading index="02" label="Selected Work" />
-
-        <h2 className="mt-10 max-w-2xl font-heading text-4xl font-bold leading-tight tracking-tight text-balance md:text-6xl">
-          A few things I&apos;ve built recently.
-        </h2>
-
-        <div className="mt-14 grid gap-6 md:grid-cols-2 md:gap-8">
-          {PROJECTS.map((project, i) => (
-            <div
-              key={project.title}
-              className={i % 2 === 1 ? 'md:mt-12' : undefined}
-            >
-              <ParallaxCard index={i}>
-                <ProjectCard project={project} />
-              </ParallaxCard>
-            </div>
-          ))}
+        <div className="flex items-center gap-4">
+          <span className="shrink-0 font-mono text-xs uppercase tracking-[0.16em] text-accent">02 / Selected work</span>
+          <span className="h-px w-full bg-border" />
+        </div>
+        <h2 className="mt-10 max-w-3xl font-heading text-4xl font-bold leading-[1.05] tracking-[-0.045em] text-balance md:text-6xl">A few things I&apos;ve built recently.</h2>
+        <p className="mt-5 max-w-xl text-pretty leading-relaxed text-muted-foreground md:text-lg">A selection of mobile experiences, from health-tech to sports and gaming.</p>
+        <div className="mt-20 md:mt-28">
+          {orderedProjects.map((project, index) => <ProjectCard key={project.title} project={project} reversed={index % 2 === 1} />)}
         </div>
       </div>
     </section>

@@ -10,75 +10,101 @@ export const SECTIONS = [
 export type Project = {
   index: string
   title: string
+  category: string
   description: string
   tags: string[]
   year: string
   github: string
   demo: string
   playStore?: string
+  exploreUrl?: string
+  screenAspectRatio?: string
+  glowPrimary: string
+  glowSecondary: string
+  glowAccent: string
   images?: string[]
 }
 
 export const PROJECTS: Project[] = [
   {
-    index: '01',
+    index: '04',
     title: '101+',
+    category: 'Health-tech',
     description:
-      'A longevity & health optimization app live on the US Play Store. Built biomarker visualizations in Jetpack Compose with real-time metric tracking, GraphQL APIs, and Shen AI SDK face-scan analysis for personalized health insights.',
+      'A longevity and health optimization application with biomarker visualizations, real-time metric tracking and AI-powered face-scan analysis using the Shen AI SDK.',
     tags: ['Kotlin', 'Jetpack Compose', 'GraphQL', 'Shen AI SDK'],
     year: '2025',
     github: 'https://play.google.com/store/apps/details?id=com.bond.fireapp&pcampaignid=web_share',
     demo: 'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
     playStore: 'https://play.google.com/store/apps/details?id=com.bond.fireapp&pcampaignid=web_share',
+    glowPrimary: '#A855F7',
+    glowSecondary: '#C084FC',
+    glowAccent: '#8B5CF6',
+    screenAspectRatio: '1240 / 2552',
     images: [
-      'project-images/hero.png',
-      'project-images/about.png',
-      'project-images/about2.png',
+      'project-images/101-face-scan-guide.jpg',
+      'project-images/101-aging-speed-dashboard.jpg',
+      'project-images/101-healthspan.jpg',
+    ],
+  },
+  {
+    index: '01',
+    title: 'UEFA More or Less',
+    category: 'Sports',
+    description:
+      'A real-time, interactive sports game where users predict match outcomes and engage with in-game statistics. The application reached 200K+ quarterly active users and delivered a 25% improvement in user retention.',
+    tags: ['Kotlin', 'Jetpack Compose', 'Firebase', 'REST API'],
+    year: '2024',
+    screenAspectRatio: '1240 / 2386',
+    glowPrimary: '#0066FF',
+    glowSecondary: '#00D9FF',
+    glowAccent: '#164BFF',
+    github: 'https://play.google.com/store/apps/details?id=com.uefa.eurofantasy&pcampaignid=web_share',
+    demo: 'https://play.google.com',
+    images: [
+      'project-images/more-or-less-home.jpg',
+      'project-images/more-or-less-gameplay.jpg',
+      'project-images/more-or-less-leaderboard.jpg',
     ],
   },
   {
     index: '02',
-    title: 'UEFA More or Less',
+    title: 'UEFA Trivia Quiz',
+    category: 'Gaming',
     description:
-      'A real-time interactive sports game supporting 200K+ quarterly active users. Improved retention by 25% through personalized push notifications and analytics-driven feature enhancements.',
-    tags: ['Kotlin', 'Jetpack Compose', 'Firebase', 'Analytics'],
+      'A football trivia application featuring image-based questions, multiple game modes and an engaging quiz experience.',
+    tags: ['Kotlin', 'Jetpack Compose', 'DataStore', 'REST API'],
     year: '2024',
+    screenAspectRatio: '1144 / 2392',
+    glowPrimary: '#174BFF',
+    glowSecondary: '#00D4E8',
+    glowAccent: '#365CFF',
     github: 'https://play.google.com/store/apps/details?id=com.uefa.eurofantasy&pcampaignid=web_share',
     demo: 'https://play.google.com',
     images: [
-      'project-images/projects.png',
-      'project-images/hero.png',
-      'project-images/about.png',
+      'project-images/uefa-quiz-arena-home.jpg',
+      'project-images/uefa-quiz-categories.jpg',
+      'project-images/uefa-stadium-question.jpg',
     ],
   },
   {
     index: '03',
-    title: 'UEFA Trivia Quiz',
-    description:
-      'An image-based trivia experience driving 30% higher engagement through optimized UI and smooth state handling. Reduced load times by 35% using DataStore caching and optimized network interactions.',
-    tags: ['Kotlin', 'Jetpack Compose', 'DataStore', 'REST'],
-    year: '2024',
-    github: 'https://play.google.com/store/apps/details?id=com.uefa.eurofantasy&pcampaignid=web_share',
-    demo: 'https://play.google.com',
-    images: [
-      'project-images/about.png',
-      'project-images/projects.png',
-      'project-images/about2.png',
-    ],
-  },
-  {
-    index: '04',
     title: 'F1 Predictor Game',
+    category: 'Motorsport',
     description:
-      'An Android prediction game built on modern MVI architecture with predictable unidirectional data flow. Architected an extensible codebase supporting rapid feature expansion with minimal refactoring.',
-    tags: ['Kotlin', 'MVI', 'Clean Architecture', 'Coroutines'],
+      'An Android prediction game for Formula 1, featuring race forecasts, live results and leaderboards, built using MVI and clean architecture for a scalable and maintainable codebase.',
+    tags: ['Kotlin', 'MVI', 'Clean Architecture', 'REST API'],
     year: '2023',
+    screenAspectRatio: '1144 / 2386',
+    glowPrimary: '#EF2525',
+    glowSecondary: '#FF4545',
+    glowAccent: '#B91C1C',
     github: 'https://play.google.com/store/apps/details?id=com.softpauer.f1timingapp2014.basic&pcampaignid=web_share',
     demo: 'https://play.google.com',
     images: [
-      'project-images/about2.png',
-      'project-images/hero.png',
-      'project-images/projects.png',
+      'project-images/f1-predict-home.jpg',
+      'project-images/f1-qualifying-prediction.jpg',
+      'project-images/f1-podium-prediction.jpg',
     ],
   },
 ]
