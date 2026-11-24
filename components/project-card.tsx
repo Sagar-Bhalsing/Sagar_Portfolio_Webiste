@@ -33,7 +33,7 @@ function Phone({ image, title, aspectRatio }: { image?: string; title: string; a
       <span className="absolute left-1/2 top-1 z-20 h-1 w-[28%] -translate-x-1/2 rounded-full bg-[#08070b]" />
       {image && !failed ? (
         <img
-          src={image}
+          src={`./${image}`}
           alt={`${title} application screen`}
           onError={() => setFailed(true)}
           className="h-full w-full bg-[#121116] object-contain"
